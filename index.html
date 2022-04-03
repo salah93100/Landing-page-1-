@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="{{ $custom_css_path }}" rel="stylesheet">
+  <title>Aterno la maitrise du chaufage</title>
+  <link rel="icon" type="image/png" href="https://i.ibb.co/bQMC3wZ/heater.png" />
+</head>
+
+<body>
+  <div id="imgbg">
+    
+    <nav class="" id="navbackground">
+      <div class="container-fullwidth">
+   
+        <div class="row align-items-center">
+ 
+          <div class="col-md-2 mb-3 offset-md-1">
+            <img src="https://i.ibb.co/bQMC3wZ/heater.png" width="60px"
+              height="60px" class="d-inline-block ">
+          </div>
+     
+         
+          <div class="col-md-8">
+            <div class="text-titre text-center fw-bold">
+              <div class=" text-warning"> UN RADIATEUR ÉLECTRIQUE PERFORMANT ET ÉCONOMIQUE </div>
+            </div>
+          </div>
+      </div>
+    </nav>
+      
+
+
+    <div class="container">
+      <div class="row justify-content-around">
+        <div class="col-md-6">
+
+
+
+          <div class="row justify-content-center">
+            <div class="text-aceuil mt-5">
+              <div class="titre-text-aceuil fs-3"> 
+                <tittle class="offset-md-1">Découvrez la basse consommation :</tittle>
+              </div>
+              <ul class="mt-4 list-head text-aceuil-mobile">
+                <li> Jusqu'a 45 % d'<span class="fw-bold">économie</span> sur votre facture
+                </li>
+                <li> Fabrication <span class="fw-bold">Française</span>
+                </li>
+                <li>Une Garantie constructeur <span class="fw-bold">25 ans</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+
+          <form method="POST">
+
+            @csrf
+            
+            <div class="background-devis mb-4 ">
+              <legend class="text-center" id="titre-devis"> VOTRE DEVIS <span class="text-warning fw-bold">
+                  MAINTENANT!</span></legend>
+              <div class="row justify-content-center">
+                @if($success)
+                  <div class="alert alert-success col-10 mb-0" role="alert">
+                    Merci de votre demande, nous vous contactons dans les plus brefs délais.
+                  </div>
+                @endif
+
+                <div class="col-md-5">
+                  <label> </label>
+                  <input type="text" class="form-control" name="data[name]" id="textFormControlInput" placeholder="Nom" required>
+
+                  <label> </label>
+                  <input type="email" class="form-control" name="identifier" id="mailFormControlInput" placeholder="name@example.com" required>
+                  <label> </label>
+                  <input type="tel" maxlength="10" class="form-control" name="data[phone]" id="numberFormControlInput" placeholder="Tel" required>
+                  <label> </label>
+                  <input type="text" class="form-control" name="data[street]" id="adressFormControlInput" placeholder="Adresse" required>
+                </div>
+                <div class="col-md-5">
+                  <label> </label>
+                  <input type="text" class="form-control" name="data[city]" id="cityFormControlInput" placeholder="Ville" required>
+                  <label> </label>
+                  <input type="number" maxlength="5" class="form-control" name="data[postal_code]" id="postalcodeFormControlInput" placeholder="Code postal" required>
+                  <label> </label>
+
+
+                  <select class="form-select text-secondary" name="data[type]" required aria-label="Default select example">
+                    <option selected>Type de logement?</option>
+                    <option value="appartement">Appartement</option>
+                    <option value="maison">Maison</option>
+                  </select>
+                  <label> </label>
+                  <select class="form-select text-secondary" name="data[owner]" required aria-label="Default select example">
+                    <option selected>Vous êtes ?</option>
+                    <option value="proprietaire">Propriétaire</option>
+                    <option value="locataire">Locataire</option>
+                  </select>
+                  <label> </label>
+                </div>
+              </div>
+              <p class="text-center text-devis">
+
+                En cliquant sur "VALIDER", j'accepte de recevoir mon guide offert ainsi qu'un devis gratuit.
+              <p>
+              <div class="row">
+
+                <div class="mx-auto text-center">
+                  <button type="submit" class="btn btn-warning btn-lg"><span
+                      class="text-btn text-light fs-4 fw-bold">VALIDER</span></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="text-titre mt-1 mb-1">
+          <div class="text-center text-warning">
+            LE CHAUFFAGE ÉLECTRIQUE S'ADAPTE À TOUTES LES SITUATIONS
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container ">
+    <div class="row justify-content-center">
+
+
+      <div class="col-md-3 text-center mt-2">
+        <img src="https://i.ibb.co/NmJqB1c/tools.png" class="card-img-top" alt="..." style="width: 63px;">
+
+        <h5 class=" fs-6 mt-4">Sans gros travaux</h5>
+      </div>
+
+      <div class="col-md-3  text-center mt-2">
+        <img src="https://i.ibb.co/GCqQ4ZD/celsius.png" class="card-img-top" alt="..." style="width: 63px;">
+
+        <h5 class="fs-6 mt-4">Contrôle facile de la température
+        </h5>
+      </div>
+      <div class="col-md-4  text-center mt-2">
+
+        <img src="https://i.ibb.co/c8L8tXL/piggy-bank.png" class="card-img-top" alt="..." style="width: 63px;">
+
+        <h5 class="fs-6 mt-4">Jusqu'à 45% d'économie</h5>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="text-titre  mt-1 mb-1">
+          <div class="text-center text-warning">
+            Des modèles dédiés à toutes les pièces de la maison </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="imgfooter">
+
+
+
+    <div class="container">
+
+      <div class="col-md-6">
+
+
+
+        <div class="row justify-content-start ">
+          <div class="text-aceuil mt-5">
+            <div class="fs-3  titre-text-aceuil offset-md-1">
+              <tittle class="">La nouvelle génération de radiateurs électriques
+                répond à vos préoccupations:</tittle>
+            </div>
+            <ul class="mt-4 list-head text-aceuil-mobile">
+              <li> Il s'adapte à toutes les situations
+
+              </li>
+              <li> Il est simple à utiliser et à installer
+
+              </li>
+              <li>Il vous permet de faire des économies
+              </li>
+              <li>Il répond spécifiquement à vos besoins
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="https://i.ibb.co/KzjP4kS/certifications.jpg" alt="..." class="img-certifications">
+    </div>
+  </div>
+  <div class="bg-warning">
+    <div class="container text-light ">
+      <div class="row offset-md-2">
+        <div class="col-md-2 me-3">
+          <div class="image-radiateur-alterno">
+            <img src="https://i.ibb.co/HNPwjjx/imagefoot.png" alt="image-radiateur-alterno">
+          </div>
+        </div>
+
+        <div class="col-md-9 ">
+
+          <div class="row ">
+            <tittle class="fs-4 ">NOTE MOYENNE DE NOS CLIENTS: 4.5/5</tittle>
+
+            <div class="col-md-4  mt-1  text-temoignage-footer ">
+              <p class="">“J'ai fini de renouveler mes radiateurs électriques l'an passé avec pose d'un thermostat et
+                j'ai découvert un nouveau confort grâce à la régularité de la température.“ <span
+                  class="text-dark fw-bold "> </br>
+                  Michel B.</span>
+              </p>
+
+
+
+            </div>
+            <div class="col-md-5   mt-1 text-temoignage-footer">
+
+              <p class="">“Les explications fournies et les réponses données par le "technico-commercial" ont été très
+                claires,
+                honnêtes, concrètes et précises. L'installation a été réalisée de façon très professionnelle. Nous
+                attendons d'apprécier
+                le confort apporté et les économies d'électricité.”
+                <span class="text-dark fw-bold "> </br>
+                  François J.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-dark" id="taille-footer">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-3">
+          <p class="text-light text-temoignage-footer mt-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            id="cgu-footer">Conditions générales - Tous droits réservés</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @if($success)
+    {!! $success_code !!}
+  @endif
+
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <tittle class="modal-title text-center fs-4" id="staticBackdropLabel"> Mentions légales et conditions générales
+          d'utilisation</tittle>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Les informations recueillies à partir de ce formulaire et identifiées par un astérisque sont nécessaires à la
+        gestion de votre demande.
+        A défaut d’être renseignées, votre demande ne pourra pas être traitée. Les données collectées sont utilisées
+        exclusivement pour la gestion de votre demande,
+        ainsi qu’à des fins statistiques et permettent de mieux vous connaître et d’améliorer les offres et services
+        fournis dans le cadre de notre politique commerciale.
+        Les données collectées sont conservées pendant une durée maximum de 3 ans suivant la fin de la relation
+        commerciale, hors obligation légale d’archivage.
+        Le responsable du traitement est la société XXX dont le siège est situé XXX et dont le SIRET est XXX.
+
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
